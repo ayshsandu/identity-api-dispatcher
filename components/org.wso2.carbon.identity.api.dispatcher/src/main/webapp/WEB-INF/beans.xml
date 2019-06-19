@@ -21,30 +21,22 @@
     <context:annotation-config/>
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"/>
-    <jaxrs:server id="server" address="/server/v1.0">
+    <jaxrs:server id="server" address="/server/v1">
         <jaxrs:serviceBeans>
-            <bean class="org.wso2.carbon.identity.rest.api.server.challenge.v10.ChallengesApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.server.challenge.v1.ChallengesApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
         </jaxrs:providers>
     </jaxrs:server>
-    <jaxrs:server id="users" address="/users/v1.0">
+    <jaxrs:server id="users" address="/users/v1">
         <jaxrs:serviceBeans>
-            <bean class="org.wso2.carbon.identity.rest.api.user.association.v10.UsersApi"/>
-            <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v10.UserIdApi"/>
-            <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v10.MeApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UsersApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.MeApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
         </jaxrs:providers>
     </jaxrs:server>
-    <!--<jaxrs:server id="users2" address="/users/v2.0">-->
-        <!--<jaxrs:serviceBeans>-->
-            <!--<bean class="org.wso2.carbon.identity.rest.api.user.challenge.v2.MeApi"/>-->
-        <!--</jaxrs:serviceBeans>-->
-        <!--<jaxrs:providers>-->
-            <!--<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>-->
-        <!--</jaxrs:providers>-->
-    <!--</jaxrs:server>-->
 </beans>
