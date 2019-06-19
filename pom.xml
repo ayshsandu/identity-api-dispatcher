@@ -188,17 +188,17 @@
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.challenge</artifactId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.challenge.v10</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.identity.user.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.user.association</artifactId>
+                <artifactId>org.wso2.carbon.identity.rest.api.user.association.v10</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
-                <artifactId>org.wso2.carbon.identity.rest.api.server.challenge</artifactId>
+                <artifactId>org.wso2.carbon.identity.rest.api.server.challenge.v10</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
         </dependencies>
