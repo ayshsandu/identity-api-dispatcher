@@ -54,3 +54,48 @@ of server APIs
         </jaxrs:server>
     ```
 5. Build the component.
+    ```
+     mvn clean install
+    ```
+
+#### Deploy and test
+
+1. Once complete the build, copy the `api.war` in the `components/org.wso2.carbon.identity.api.dispatcher/target/` 
+into `[IS_HOME]/repository/deployment/server/webapps/` location and restart the server. (If already exploded `api` 
+folder exists in the location, remove it before restarting)
+
+    ```
+    ├── components
+    │   └── org.wso2.carbon.identity.api.dispatcher
+    │       └── target
+    │           ├── api.war
+    ```
+2. Access the API 
+
+    User APIs
+    ```
+        https://localhost:9443/api/users/v1/<resource>/<bla-bla-bla>
+    ```
+    
+    Sample endpoint:
+    ```
+        https://localhost:9443/api/users/v1/me/challenges
+    ```
+    Sample Request:
+    ```
+        curl -X GET "https://localhost:9443/api/users/v1/me/challenges" -H "accept: application/json" -k
+    ```
+    
+    Server APIs
+    
+    ```
+        https://localhost:9443/api/server/v1/<resource>/<bla-bla-bla>
+    ```
+    Sample endpoint:
+    ```
+        https://localhost:9443/api/server/v1/challenges
+    ```
+    Sample Request:
+    ```
+        curl -X GET "https://localhost:9443/api/server/v1/challenges" -H "accept: application/json" -H -k
+    ```
