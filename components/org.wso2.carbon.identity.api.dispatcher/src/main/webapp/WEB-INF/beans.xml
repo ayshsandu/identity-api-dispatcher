@@ -21,14 +21,15 @@
     <context:annotation-config/>
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"/>
-    <jaxrs:server id="server" address="/server/v1">
-        <jaxrs:serviceBeans>
-            <bean class="org.wso2.carbon.identity.rest.api.server.challenge.v1.ChallengesApi"/>
-        </jaxrs:serviceBeans>
-        <jaxrs:providers>
-            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
-        </jaxrs:providers>
-    </jaxrs:server>
+    <bean id="postprocess" class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <!--<jaxrs:server id="server" address="/server/v1">-->
+        <!--<jaxrs:serviceBeans>-->
+            <!--<bean class="org.wso2.carbon.identity.rest.api.server.challenge.v1.ChallengesApi"/>-->
+        <!--</jaxrs:serviceBeans>-->
+        <!--<jaxrs:providers>-->
+            <!--<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>-->
+        <!--</jaxrs:providers>-->
+    <!--</jaxrs:server>-->
     <jaxrs:server id="users" address="/users/v1">
         <jaxrs:serviceBeans>
             <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UsersApi"/>
