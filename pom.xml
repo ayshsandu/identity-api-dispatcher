@@ -188,6 +188,11 @@
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.identity.user.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.user.challenge.common</artifactId>
+                <version>${identity.user.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.user.api</groupId>
                 <artifactId>org.wso2.carbon.identity.rest.api.user.challenge.v1</artifactId>
                 <version>${identity.user.api.version}</version>
             </dependency>
@@ -199,6 +204,11 @@
             <dependency>
                 <groupId>org.wso2.carbon.identity.server.api</groupId>
                 <artifactId>org.wso2.carbon.identity.rest.api.server.challenge.v1</artifactId>
+                <version>${identity.server.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.server.api</groupId>
+                <artifactId>org.wso2.carbon.identity.api.server.challenge.common</artifactId>
                 <version>${identity.server.api.version}</version>
             </dependency>
         </dependencies>
@@ -290,7 +300,7 @@
         <jackson-databind.version>2.9.7</jackson-databind.version>
         <cxf-bundle.version>3.2.8</cxf-bundle.version>
         <jackson.version>1.9.13</jackson.version>
-        <spring-web.version>4.1.6.RELEASE</spring-web.version>
+        <spring-web.version>5.1.1.RELEASE</spring-web.version>
         <swagger-jaxrs.version>1.5.20</swagger-jaxrs.version>
         <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
         <junit.version>4.12</junit.version>
