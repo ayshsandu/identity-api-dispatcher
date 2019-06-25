@@ -29,6 +29,7 @@
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.JsonMappingExceptionMapper"/>
         </jaxrs:providers>
     </jaxrs:server>
     <jaxrs:server id="users" address="/users/v1">
@@ -39,6 +40,7 @@
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <bean class="org.wso2.carbon.identity.api.dispatcher.JsonMappingExceptionMapper"/>
         </jaxrs:providers>
     </jaxrs:server>
 </beans>
